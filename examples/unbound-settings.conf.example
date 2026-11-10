@@ -1,0 +1,23 @@
+# Illustrative fragment only. Do not install this file directly.
+# Documentation addresses below are reserved and WILL NOT provide upstream DNS.
+# Select a real trusted provider and its authentication name privately.
+# Merge with reviewed package configuration; validate version/chroot compatibility.
+server:
+    do-ip6: no
+    tls-cert-bundle: "/opt/etc/ssl/certs/ca-certificates.crt"
+    # Keep configuration administrator-owned. Put a writable trust anchor in
+    # separately permissioned daemon state; use the actual local path.
+    # auto-trust-anchor-file: "/path/to/daemon-state/root.key"
+
+remote-control:
+    control-enable: yes
+    # Parent directory permissions, ownership and addon compatibility matter.
+    # Create the parent through a reviewed local deployment process.
+    control-interface: "/path/to/protected-control/control.sock"
+
+forward-zone:
+    name: "."
+    forward-tls-upstream: yes
+    forward-first: no
+    forward-addr: 192.0.2.53@853#resolver.example
+    forward-addr: 198.51.100.53@853#resolver.example

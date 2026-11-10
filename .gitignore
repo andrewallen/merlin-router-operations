@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+private/
+local/
+backups/
+*.log
+*.cfg
+*.pem
+*.key
+*.ipk
+*.tar
+*.tar.gz
+*.tgz
+*.zip
