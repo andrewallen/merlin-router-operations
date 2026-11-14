@@ -23,6 +23,8 @@ This is a sanitised engineering reference. It is not a copy of a live router, a 
 | Client-side encrypted off-router backups | [Backblaze B2 design](docs/11-backblaze-b2-design.md) |
 | Keeping this repository safe to publish | [Publication policy](docs/12-publication-policy.md) |
 
+The [activity ledger](docs/14-activity-ledger.md) reconciles implemented changes, investigations, superseded steps and open work. Its review boundary is 14 November 2026; it is not a live status feed. Private source records and recovery artifacts remain separate.
+
 ## Tools and examples
 
 - [Local publication checker](tools/check_publication.py): checks the explicit publication allowlist, suspicious file types, personal-address patterns and common secret formats. It can also use a private, external denylist. It does not upload files.

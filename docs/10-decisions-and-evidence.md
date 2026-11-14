@@ -25,6 +25,10 @@ This summarises categories of work without retaining live addresses, exact devic
 | Guest | Preserve independent routing/DNS and effective isolation | Bridge, firewall and driver checks; no exhaustive two-client or transition testing |
 | Roaming | Observe and correlate before tuning | Mesh/service samples and radio/log inspection; no universal root cause established |
 
+## Later activity reconciliation
+
+The [activity ledger](14-activity-ledger.md) extends this initial category summary through 14 November 2026. It records subsequent device filtering, VPN DNS integration, collector and monitoring corrections, Quad9 selection, client-path checks and Private Relay policy. The older table is a summary of historical work, not an exhaustive current deployment manifest.
+
 ## Open recommendations
 
 - Restrict trusted-LAN administration to selected management devices after establishing a safe recovery route.

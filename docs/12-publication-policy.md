@@ -29,3 +29,9 @@ The checker is a guardrail, not a complete data-loss prevention system. It detec
 Use reserved documentation addresses and generic roles. Describe the class of problem, supported fix, validation and limitations. Keep raw evidence private. Avoid screenshots of router pages even when obvious passwords are masked: titles, hostnames, device lists and URLs can still identify a household.
 
 If a secret is published, revoke or rotate it promptly. Deleting it in a later commit does not remove it from Git history, caches or existing clones. A public repository is never an appropriate location for real backup material, even if encrypted.
+
+## Reconcile activities without publishing evidence
+
+Maintain a public activity ledger and a private source-to-ledger reconciliation. Each meaningful change, investigation, rejected alternative and unresolved finding should have a stable reference and explicit status. Map supporting exports, fixtures and implementation iterations privately; do not copy their filenames or contents into the public ledger.
+
+Before publishing an update, review the changed tree, staged paths, complete Git history and commit metadata. Scan the candidate against the external private denylist and check that no raw artifact was added. Reconcile activity coverage separately from privacy checks: passing the privacy scanner does not prove completeness, and a complete ledger does not justify publishing sensitive evidence. Read back the published commit/tree after upload.

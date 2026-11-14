@@ -43,3 +43,9 @@ Keep the last known-good blocklist if a download or validation fails. A failed r
 Verify package versions, dependencies and retained packages; look for processes mapping deleted libraries; check actual generated and served pages; run the existing guard; compare DNS, guest and VPN policy. A regenerated page can have different permissions from its source template.
 
 Do not export the site's manifests or patched third-party trees into a public reference repository. They can reveal local state and create licensing or compatibility problems. This repository documents the design rather than supplying a universal repair overlay.
+
+## Keep policy changes in the reviewed update baseline
+
+Later collector, monitoring, upstream-provider and frontend-policy changes were enrolled in the protected overlay and code inventory after validation. Update only the affected reviewed hashes; do not regenerate a baseline that silently accepts unrelated drift. A known prior version can be a reviewed restoration source, while unfamiliar replacements still require source review. Protected-code counts are historical observations, not a permanent acceptance criterion: compare the intended entries and their content.
+
+A configuration hook can be small but policy-critical. Preserve existing addon integration when changing its prefix, test repeated execution and mode-dependent output, and include the hook in update protection. Successful script hashing alone does not establish that generated DNS configuration has the intended behaviour.

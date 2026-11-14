@@ -31,3 +31,12 @@
 - Record brief service effects and any remaining concern.
 - Keep restore locations and credentials private.
 - Update approved code baselines only after exact-source review.
+
+## Close the activity record
+
+- Assign a stable public activity reference and a private evidence mapping.
+- Distinguish implementation, historical intermediate results, observations and deferred work.
+- Mark corrected conclusions and temporary troubleshooting exceptions explicitly.
+- Link unresolved findings to acceptance criteria rather than marking them complete.
+- Update relevant guides and the ledger, run publication checks, and verify the published revision.
+- Keep exact rollback commands, private paths and deployment identifiers outside the public record.

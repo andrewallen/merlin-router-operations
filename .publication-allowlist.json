@@ -20,5 +20,6 @@
   "examples/unbound-settings.conf.example",
   "tests/test_publication.py",
   "tools/check_publication.py",
-  "tools/router-readonly-summary.sh"
+  "tools/router-readonly-summary.sh",
+  "docs/14-activity-ledger.md"
 ]

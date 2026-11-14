@@ -4,6 +4,8 @@
 # Merge with reviewed package configuration; validate version/chroot compatibility.
 server:
     do-ip6: no
+    # IPv4 transport does not justify filtering every IPv6 DNS answer.
+    # Retain reviewed private ranges; never use private-address: ::/0.
     tls-cert-bundle: "/opt/etc/ssl/certs/ca-certificates.crt"
     # Keep configuration administrator-owned. Put a writable trust anchor in
     # separately permissioned daemon state; use the actual local path.

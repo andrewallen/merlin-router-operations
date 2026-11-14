@@ -23,3 +23,12 @@ Use the exact source tag and current documentation relevant to the installed sys
 | restic backends and B2 considerations | [Repository preparation](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html) |
 
 The local change records behind this repository are intentionally not published. Product names identify the software being discussed, not an endorsement or an affiliation.
+
+## Additional DNS and filtering references
+
+- [Quad9 services](https://docs.quad9.net/services/) and [privacy policy](https://quad9.net/privacy/policy/).
+- [Unbound downstream DoH support](https://unbound.docs.nlnetlabs.nl/en/latest/topics/privacy/dns-over-https.html).
+- [HaGeZi blocklists and device-specific lists](https://github.com/hagezi/dns-blocklists).
+- [Apple Private Relay network guidance](https://developer.apple.com/icloud/prepare-your-network-for-icloud-private-relay/) and [privacy architecture](https://support.apple.com/en-gb/102602).
+- [DNS privacy considerations, RFC 9076](https://www.rfc-editor.org/rfc/rfc9076.html), [DoT, RFC 7858](https://www.rfc-editor.org/rfc/rfc7858.html) and [DoH, RFC 8484](https://www.rfc-editor.org/rfc/rfc8484.html).
+- [dnsmasq configuration reference](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html).

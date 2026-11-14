@@ -33,3 +33,13 @@ Firmware, Entware and addons have different release channels. A newly published 
 A firewall restart can reapply FlexQoS, flush connection tracking, restart port mapping and trigger YazFi reauthentication. Inspect the final state after asynchronous hooks finish. Document brief service effects and compare classification rules separately from routing and security rules.
 
 One observed VPN hook appended a duplicate NAT rule for disabled IPv6. IPv6 filter policies remained restrictive and no active IPv6 path was established. Such differences should be explicitly accounted for, not hidden by broad normalisation or advertised as a newly fixed issue.
+
+## Keep follow-up findings separate from completed changes
+
+Post-change checks found both nodes operational and compared protected routing, guest, resolver, VPN, firewall, scheduler and code state against private baselines. Later scheduled checks passed both encrypted upstreams; intermittent direct TLS EOF/timeouts still occurred in other samples. Do not erase those failures because the last probe passed, or restart a working resolver solely to make a dashboard green.
+
+A particular mobile-network AAAA lookup failed under both the earlier and later providers while its IPv4 lookup worked. Direct encrypted attempts did not conclusively isolate the cause. Track it separately from the repaired broad AAAA/HTTPS validation problem; application impact was not established.
+
+A client diagnostic initially appeared inconsistent with healthy node DNS. Reading the full operating-system resolver and interface state later showed an independent tunnel resolver, even though a simpler VPN-service list showed disconnected entries. The tunnel is a confirmed policy exception; its responsibility for the direct-query timeout remains unproven. Do not disable an authorised VPN to force a passing test.
+
+Connection snapshots provided useful metadata. An event stream yielded no usable events and was treated as inconclusive, not evidence of no traffic. No packet-capture package was installed to complete that check. Weak-signal disconnects remain an open roaming observation despite successful short mesh ping samples.
